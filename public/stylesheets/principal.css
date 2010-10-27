@@ -1,0 +1,17 @@
+* {margin:0; padding:0;}
+body { font-family:"Bradley Hand ITC TT";}
+#geral {padding-top:30px; width:720px; margin:0 auto;}
+#geral #conteudo {min-height:200px; padding-top:70px; padding-bottom:20px; background:#FFF url("../images/bg-arrame.jpg") left top repeat-x;}
+.linha {width:700px; margin:0 auto; height:28px; padding-bottom:5px; border-bottom:2px solid #CDEAEE; overflow:hidden;}
+.linha p {padding:10px 20px;}
+.linha p a {widht:100%; display:block; text-decoration:none; color:#000;}
+.linha p a:hover {color:blue; font-weight:bold; background:url("../images/lupa.gif") top right no-repeat;}
+.titulo {font-size:25px; float:left;}
+.botao-inserir {float:right; vertical-align:bottom; padding-top:10px;}
+.botao-inserir a, .btn-submit a {color:#CC0000; font-weight:bold; text-decoration:none;}
+.btn-submit a {margin-left:15px;}
+.duas-colunas {overflow:hidden;}
+.duas-colunas .esq {float:left; width:100px;}
+.duas-colunas .dir {float:left;}
+.duas-colunas .dir input[type="text"] {width:300px; background:none; border:none; border-bottom:2px dotted #000;}
+.btn-submit {padding-top:20px; text-align:right; margin-right:30px;}

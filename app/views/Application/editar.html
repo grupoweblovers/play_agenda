@@ -1,0 +1,64 @@
+#{extends 'application.html' /}
+#{set title:'Edição' /}
+
+#{form @Application.editar_contato(contato.id)}
+	#{ifErrors}
+	  <div class="linha"><p style="color:red;"><strong>ATENÇÃO: </strong>Preencha todos os campos obrigatórios.</p></div>
+		<div class="linha"></div>
+   #{/ifErrors}
+
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="nome">Nome:</label></p>
+			</div>
+			<div class="dir">
+				<p><input type="text" name="nome" id="nome" value="${contato.nome}" /></p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="telefone">Telefone:</label></p>
+			</div>
+			<div class="dir">
+				<p><input type="text" name="telefone" id="telefone" value="${contato.telefone}" /></p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="email">Email:</label></p>
+			</div>
+			<div class="dir">
+				<p><input type="text" name="email" id="email" value="${contato.email}" /></p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="twitter">Twitter:</label></p>
+			</div>
+			<div class="dir">
+				<p><input type="text" name="twitter" id="twitter" value="${contato.twitter}"/></p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="skype">Skype:</label></p>
+			</div>
+			<div class="dir">
+				<p><input type="text" name="skype" id="skype" value="${contato.skype}" /></p>
+			</div>
+		</div>
+	</div>
+	<div class="btn-submit">
+		<p><input type="submit" value="Editar o Contato" /></p>
+	</div>
+	
+#{/form}

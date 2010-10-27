@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>.: Agenda de Contatos - #{get 'title' /}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="screen" href="@{'/public/stylesheets/principal.css'}">
+  #{get 'moreStyles' /}
+  <script src="@{'/public/javascripts/jquery-1.4.2.min.js'}" type="text/javascript" charset="utf-8"></script>
+  #{get 'moreScripts' /}
+</head>
+
+<body>
+	<div id="geral">
+		<div id="conteudo">
+			<div class="linha">
+				<div class="titulo">.: Minha Agenda</div>
+				#{if request.actionMethod != "inserir" && request.actionMethod != "editar"}
+				<div class="botao-inserir"><a href="@{Application.inserir()}">+ Incluir Contato</a></div>
+				#{/if}
+			</div>
+			<div class="linha"></div>
+			#{doLayout /}
+		</div>
+		</div>
+	</div>
+</body>
+</html>

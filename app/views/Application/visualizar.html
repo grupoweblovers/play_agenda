@@ -1,0 +1,60 @@
+#{extends 'application.html' /}
+#{set title:'Visualização' /}
+
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="nome">Nome:</label></p>
+			</div>
+			<div class="dir">
+				<p>${contato.nome}</p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="telefone">Telefone:</label></p>
+			</div>
+			<div class="dir">
+				<p>${contato.telefone}</p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="email">Email:</label></p>
+			</div>
+			<div class="dir">
+				<p>${contato.email}</p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="twitter">Twitter:</label></p>
+			</div>
+			<div class="dir">
+				<p>${contato.twitter}</p>
+			</div>
+		</div>
+	</div>
+	<div class="linha">
+		<div class="duas-colunas">
+			<div class="esq">
+				<p><label for="skype">Skype:</label></p>
+			</div>
+			<div class="dir">
+				<p>${contato.skype}</p>
+			</div>
+		</div>
+	</div>
+	<div class="btn-submit">
+		<p>
+			<a href="@{Application.index()}">Cancelar</a>
+			<a href="@{Application.editar(contato.email)}">Editar</a>
+			<a href="@{Application.excluir(contato.email)}" onClick="if(!confirm('Deseja excluir este contato?')){return false;}">Excluir</a>
+		</p>
+	</div>

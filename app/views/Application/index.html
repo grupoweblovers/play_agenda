@@ -1,0 +1,15 @@
+#{extends 'application.html' /}
+#{set title:'Listagem' /}
+
+#{if contatos.size() == 0}
+	<div class="linha">
+		<p>Nenhum contato cadastrado.</p>
+	</div>
+#{/if}
+#{else}
+	#{list items:contatos, as:'contato'}
+	<div class="linha">
+		<p><a href="@{Application.visualizar(contato.email)}">&raquo; ${contato.nome} - ${contato.email}</a></p>
+	</div>
+  #{/list}
+#{/else}
